@@ -1,2 +1,15 @@
 schema: '2.0'
-stages: {}
+stages:
+  build:
+    cmd: .venv/bin/python stages/01_download_build.py
+    deps:
+    - path: stages/01_download_build.py
+      hash: md5
+      md5: ab4aaf71f829cad2b48844d295bdadb4
+      size: 6944
+    outs:
+    - path: brick
+      hash: md5
+      md5: 4addedf3dec9dfed6f761e95c963c50b.dir
+      size: 123944
+      nfiles: 3
